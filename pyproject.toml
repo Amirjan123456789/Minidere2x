@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "Minidere2x"
+version = "2022.01.14"
+description = "Minimal Implementation of Dandere2x Algorithm in Python"
+authors = ["Tremeschin"]
+maintainers = ["Tremeschin"]
+license = "MIT"
+homepage = "https://github.com/Tremeschin/Minidere2x"
+repository = "https://github.com/Tremeschin/Minidere2x"
+packages = [
+    {include = "Minidere2x"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+imageio-ffmpeg = "^0.4.5"
+waifu2x-ncnn-vulkan-python = "^20211214"
+numpy = "^1.21.5"
+loguru = "^0.5.3"
+halo = "^0.0.31"
+pyzmq = "^22.3.0"
+Pillow-SIMD = "^8.4.0"
+yatch = {git = "https://github.com/Tremeschin/Yatch.git", rev = "Master"}
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/Tremeschin/Minidere2x/issues"
+
+[tool.poetry.scripts]
+minidere2x = "Minidere2x.Minidere2x:Main"
